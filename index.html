@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>예식 사회자 대본 초안 · 김준범 ♥ 김란</title>
+  <meta name="description" content="2026. 9. 19 상록아트홀 예식 사회자 대본 초안. 형진이에게 공유용." />
+  <style>
+    :root {
+      --bg: #f6f1ea;
+      --paper: #fffdf9;
+      --ink: #2b241c;
+      --muted: #6b5e50;
+      --line: #e6d9c8;
+      --gold: #9a7b4f;
+      --gold-soft: #f3e8d6;
+      --cue: #7a4e2d;
+      --note: #4d5a45;
+      --note-bg: #eef3e8;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 500px at 50% -10%, #fff8ee, transparent 55%),
+        var(--bg);
+      font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      line-height: 1.7;
+    }
+
+    .wrap {
+      width: min(760px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 80px;
+    }
+
+    .banner {
+      background: #fff6e8;
+      border: 1px solid #ead7b6;
+      color: #6d5328;
+      border-radius: 16px;
+      padding: 14px 16px;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    header.hero {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px 24px 22px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(90, 64, 32, 0.06);
+    }
+
+    .kicker {
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-family: "Iowan Old Style", "Times New Roman", serif;
+      font-weight: 500;
+      font-size: clamp(28px, 6vw, 40px);
+      margin: 0 0 6px;
+    }
+
+    .sub {
+      color: var(--muted);
+      margin: 0 0 18px;
+      font-size: 15px;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 12px;
+      text-align: left;
+      background: #fbf6ef;
+      border-radius: 16px;
+      padding: 14px 16px;
+      font-size: 13px;
+    }
+
+    .meta span { color: var(--muted); display: block; font-size: 11px; }
+    .meta b { font-weight: 600; }
+
+    .actions {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    button, .btn {
+      appearance: none;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    button.primary {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+
+    nav.toc {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      background: color-mix(in srgb, var(--bg) 88%, white);
+      backdrop-filter: blur(10px);
+      margin: 18px -16px 8px;
+      padding: 10px 16px;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    nav.toc a {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 999px;
+      padding: 6px 10px;
+      margin-right: 6px;
+      font-size: 12px;
+    }
+
+    section.card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 22px 20px;
+      margin: 14px 0;
+    }
+
+    .time {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .notes {
+      background: var(--note-bg);
+      color: var(--note);
+      border-radius: 14px;
+      padding: 12px 14px;
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .notes strong { display: block; margin-bottom: 4px; font-size: 12px; }
+    .notes ol, .notes ul { margin: 6px 0 0; padding-left: 18px; }
+
+    .script {
+      white-space: pre-wrap;
+      font-size: 17px;
+      line-height: 1.85;
+    }
+
+    .cue {
+      color: var(--cue);
+      font-weight: 800;
+    }
+
+    .stage {
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      padding-top: 18px;
+    }
+
+    @media (max-width: 640px) {
+      .meta { grid-template-columns: 1fr; }
+      .script { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="banner">
+      초안입니다. 사회를 봐 줄 형진이에게 먼저 공유하는 버전이에요.
+      문장·호흡·동선이 어색한 곳이 있으면 편하게 말해 주세요.
+    </div>
+
+    <header class="hero">
+      <div class="kicker">Wedding MC Draft</div>
+      <h1>김준범 ♥ 김란</h1>
+      <p class="sub">2026. 9. 19 · 17:40 · 상록아트홀</p>
+      <div class="meta">
+        <div><span>사회자</span><b>김형진 (신랑 20년 지기)</b></div>
+        <div><span>축사</span><b>신부 측 이문규 할아버님</b></div>
+        <div><span>축복기도</span><b>김신은 목사님</b></div>
+        <div><span>축가</span><b>신랑 직접 · 곡명 멘트에는 넣지 않음</b></div>
+        <div><span>성혼선언</span><b>사회자 낭독</b></div>
+        <div><span>연회장</span><b>같은 층 바로 옆</b></div>
+      </div>
+      <div class="actions">
+        <button class="primary" type="button" onclick="copyLink()">링크 복사</button>
+        <a class="btn" href="#toc-list">식순 보기</a>
+      </div>
+    </header>
+
+    <nav class="toc" id="toc-list" aria-label="식순">
+      <a href="#s1">5:35 안내</a>
+      <a href="#s2">5:38 개식</a>
+      <a href="#s3">5:40 부모님</a>
+      <a href="#s4">5:42 화촉</a>
+      <a href="#s5">5:44 대기</a>
+      <a href="#s6">5:46 신랑</a>
+      <a href="#s7">5:48 신부</a>
+      <a href="#s8">5:50 맞절</a>
+      <a href="#s9">5:51 성혼</a>
+      <a href="#s10">5:53 축사</a>
+      <a href="#s11">5:55 기도</a>
+      <a href="#s12">5:59 축가</a>
+      <a href="#s13">6:04 화이팅</a>
+      <a href="#s14">6:06 내빈</a>
+      <a href="#s15">6:10 행진</a>
+      <a href="#s16">폐식</a>
+    </nav>
+
+    <section class="card" id="s1">
+      <div class="time">5:35 · 2~3회 반복</div>
+      <h2>1. 예식 5분 전 하객 안내</h2>
+      <div class="notes">
+        <strong>비고</strong>
+        <ul>
+          <li>식장 안·복도에서 2~3회 반복</li>
+          <li>신랑·신부 이름 확인 후 진행</li>
+          <li>하객이 자리를 잡을 때까지 여유 있게</li>
+        </ul>
+      </div>
+      <div class="script">하객 여러분께 안내 말씀 드리겠습니다.
+
+잠시 후, 신랑 김준범 군과 신부 김란 양의 결혼식이 시작됩니다.
+밖에 계신 분들께서는 식장 안으로 들어오셔서 자리에 앉아 주시기 바랍니다.
+
+아울러 원활한 진행을 위해,
+휴대폰은 진동으로 해 주시거나 잠시 꺼 주시면 감사하겠습니다.</div>
+    </section>
+
+    <section class="card" id="s2">
+      <div class="time">5:38</div>
+      <h2>2. 개식사</h2>
+      <div class="notes">
+        <strong>비고</strong>
+        <ul>
+          <li>양가 모친·부친, 신랑·신부 대기 위치 확인 후 시작</li>
+          <li>로드 시작점에 양가 부모님 한 쌍씩 서 있는지 확인</li>
+          <li>사회자 소개는 짧게. 친구라는 점을 밝히되, 개식 톤은 지키며</li>
+        </ul>
+      </div>
+      <div class="script">안녕하십니까.
+오늘 귀한 걸음 해 주신 하객 여러분께,
+양가 부모님과 신랑, 신부를 대신해 깊이 감사드립니다.
+
+오늘 신랑 김준범 군과 신부 김란 양의 결혼식 사회를 맡은 김형진입니다.
+저 친구를 스무 해 동안 봐 온 친구입니다.
+힘든 일도, 즐거운 추억도 많이 쌓았는데요.
+그 친구가 오늘 이렇게 결혼을 하게 되니까, 저까지 설레고 떨립니다.
+
+제가 시작하겠습니다.
+오늘 멘트가 어색하다면, 우레와 같은 박수와 함성으로 두 사람을 축복해 주시면 감사하겠습니다.
+시작부터 끝날 때까지, 여러분의 큰 박수와 환호성으로 이 결혼식을 함께 만들어 주시길 부탁드립니다.
+
+그럼 지금부터 김준범 군과 김란 양의 결혼식을 시작하겠습니다.</div>
+    </section>
+
+    <section class="card" id="s3">
+      <div class="time">5:40–5:42</div>
+      <h2>3. 양가 부모님 입장</h2>
+      <div class="notes">
+        <strong>동선</strong>
+        <ol>
+          <li>로드 시작에 양가 부모님 한 쌍씩 대기.</li>
+          <li>신랑 측 부모님 먼저 입장 → 로드 거의 끝까지 가서 뒤로 돌아 서서 기다림.</li>
+          <li>신부 측 부모님 입장 → 로드 끝에서 만남.</li>
+          <li>두 가정이 악수하며 서로 인사.</li>
+          <li>각자 부부끼리 화촉점화 자리로 이동.
+            신랑 측은 단을 바라봤을 때 왼쪽, 신부 측은 오른쪽.</li>
+          <li>바로 화촉점화로 연결.</li>
+        </ol>
+        어머님끼리·아버님끼리 손잡고 함께 들어오는 연출은 없음. 하객에게 좌·우 방향은 크게 안내하지 않음.
+      </div>
+      <div class="script">자, 그럼 가장 먼저 첫 번째 순서로
+우리 양가 부모님의 입장이 있도록 하겠습니다.
+
+보통은 어머님께서만 입장하시는데요, 오늘은 조금 다릅니다.
+아버님께서도 함께 걸어 들어오십니다.
+
+모두 뒤편 한 번 바라봐 주십시오.
+우리 신랑 부모님께서는 두 사람을 평생 동안 키워 주신
+오늘의 예식의 숨은 주인공이십니다.
+
+신랑 측 부모님을 먼저 만나보도록 하겠습니다.
+입장하실 때 큰 박수와 환호성 부탁드리겠습니다.
+
+<span class="cue">신랑 측 부모님 입장!</span>
+
+<span class="stage">(신랑 측 부모님이 로드 거의 끝까지 가서 뒤로 돌아 설 때까지 기다림)</span>
+
+이번에는 신부를 한결같은 사랑으로 키워 주신
+신부 측 부모님을 마찬가지로 뒤편에서 만나보도록 하겠습니다.
+
+손을 잡아 주시고,
+신부 부모님께서도 입장해 주십시오.
+
+<span class="cue">신부 측 부모님 입장!</span>
+
+<span class="stage">(신부 측 부모님이 로드 끝에 도착할 때까지 기다림)</span>
+
+자, 로드 끝에서 두 가정이 만나 인사를 나누시겠습니다.
+축복의 박수 부탁드립니다.
+
+<span class="stage">(악수 · 인사)</span>
+
+이제 양가 부모님께서는 화촉점화를 위해 자리에 서 주시기 바랍니다.</div>
+    </section>
+
+    <section class="card" id="s4">
+      <div class="time">5:42–5:44</div>
+      <h2>4. 화촉점화</h2>
+      <div class="notes">
+        <strong>비고</strong>
+        <ul>
+          <li>양가 부모님이 각자 화촉 자리에 선 뒤 시작</li>
+          <li>촛불 점화 → 내빈 인사 → 착석</li>
+          <li>양가 맞절은 없음 (로드 끝에서 이미 악수 인사)</li>
+          <li>점화 순간에 박수 유도</li>
+        </ul>
+      </div>
+      <div class="script">오늘의 예식을 밝혀 줄 불을 켜는 순서입니다.
+양가 부모님께서 화촉을 밝혀 주시겠습니다.
+
+오늘 이 자리까지 키워 주시고 고생하시고 수고하셨습니다.
+네 분을 향해 따뜻한 박수 한 번 보내 주시기 바랍니다.
+
+<span class="stage">(화촉점화)</span>
+
+자, 이렇게 오늘 부모님께서 이 예식의 시작을 알려 주셨습니다.
+양가 부모님께서는 하객 여러분을 향해 서주시기를 바랍니다.
+“오늘 이 자리에 오신 하객 여러분들 진심으로 감사합니다.” 하는 마음을 담아서,
+
+<span class="cue">양가 부모님 내빈 여러분께 인사!</span>
+
+이제 양가 부모님께서는 자리에 착석해 주시기 바랍니다.</div>
+    </section>
+
+    <section class="card" id="s5">
+      <div class="time">5:44–5:46</div>
+      <h2>5. 착석 · 신랑 대기 확인</h2>
+      <div class="notes">
+        <strong>멘트 없음</strong>
+        <ul>
+          <li>부모님 착석 확인</li>
+          <li>신랑 대기 위치·음향·조명 확인</li>
+          <li>준비되면 신랑 입장으로</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" id="s6">
+      <div class="time">5:46</div>
+      <h2>6. 신랑 입장</h2>
+      <div class="notes">
+        <strong>비고</strong>
+        <ul>
+          <li>신랑 대기 상태 확인 후</li>
+          <li>하객이 뒤를 보도록 유도한 뒤 힘차게 큐</li>
+          <li>친구 멘트는 한 줄만. 길어지지 않게</li>
+        </ul>
+      </div>
+      <div class="script">이 무대의 첫 번째 주인공을 만날 시간입니다.
+
+자, 뒤를 바라봐 주십시오.
+제가 스무 해 동안 보아 온 그 친구입니다.
+큰 박수와 환호성으로 맞이해 주시기 바랍니다.
+
+<span class="cue">신랑 입장!</span> <span class="stage">(큰소리로 힘차게)</span></div>
+    </section>
+
+    <section class="card" id="s7">
+      <div class="time">5:48</div>
+      <h2>7. 신부 입장</h2>
+      <div class="notes">
+        <strong>비고</strong>
+        <ul>
+          <li>신부 대기 상태 확인 후</li>
+          <li>신랑 입장 때보다 더 큰 박수 유도</li>
+          <li>로드 중간쯤 한 번 더 박수 멘트</li>
+        </ul>
+      </div>
+      <div class="script">두 번째 주인공을 만나 볼 차례입니다.
+오늘의 가장 아름다운 주인공, 신부입니다.
+
+긴장하고 있을 신부를 위해,
+조금 전보다 더 큰 박수로 맞이해 주시기 바랍니다.
+
+<span class="cue">신부 입장!</span> <span class="stage">(큰소리로 힘차게)</span>
+
+<span class="stage">(로드 중간쯤)</span>
+
+이 순간을 평생 기억하실 수 있도록, 축복의 박수 부탁드립니다.</div>
+    </section>
+
+    <section class="card" id="s8">
+      <div class="time">5:50</div>
+      <h2>8. 맞절</h2>
+      <div class="notes">
+        <strong>비고</strong>
+        <ul>
+          <li>신랑·신부가 단 앞에 선 뒤</li>
+          <li>사회자가 큐</li>
+        </ul>
+      </div>
+      <div class="script">마주 서 있습니다. 서로를 마주 봐 주시고요.
+
+서로 사랑하는 두 사람이 한마음으로,
+서로를 평생 아끼고 사랑하듯 첫인사를 나누는 순서입니다.
+
+<span class="cue">신랑, 신부 맞절!</span></div>
+    </section>
+
+    <section class="card" id="s9">
+      <div class="time">5:51</div>
+      <h2>9. 성혼선언문</h2>
+      <div class="notes">
+        <strong>비고</strong>
+        <ul>
+          <li>혼인서약은 없음. 맞절 후 바로 성혼선언</li>
+          <li>사회자가 직접 낭독</li>
+          <li>아래 선언문은 초안. 문구는 수정해서 사용</li>
+        </ul>
+      </div>
+      <div class="script">이어서 두 사람이 완전한 부부가 되었음을 알리는
+성혼선언문 낭독이 있겠습니다.
+성혼선언문은 제가 낭독하도록 하겠습니다.
+
+<span class="stage">(낭독)</span>
+
+오늘 이 자리에서 혼인의 예를 올린 신랑 김준범 군과 신부 김란 양은
+이제 부부가 되었음을 선언합니다.
+
+두 사람은 이제부터 기쁠 때나 슬플 때나, 건강할 때나 병들 때나
+일생 동안 고락을 함께하며 서로를 아끼고 사랑할 것을 약속하였습니다.
+
+오늘 이 자리에 모이신 분들께서 함께 증인이 되어 주셨습니다.
+두 사람을 축복의 박수로 맞아 주시기 바라겠습니다.</div>
+    </section>
+
+    <section class="card" id="s10">
+      <div class="time">5:53</div>
+      <h2>10. 축사</h2>
+      <div class="notes">
+        <strong>비고</strong>
+        <ul>
+          <li>신부 측 할아버님</li>
+          <li>성함·대기 위치 확인 후 초청</li>
+          <li>축사 후 박수 · 착석</li>
+        </ul>
+      </div>
+      <div class="script">아, 다음에 두 사람의 앞날을 축복하는 덕담 순서가 있겠습니다.
+이 자리는 신부 측 할아버님이신 이문규 님께서 맡아 주시겠습니다.
+할아버님, 단상으로 나와 주시기 바랍니다.
+
+<span class="stage">(축사)</span>
+
+따뜻한 말씀 감사드립니다.
+큰 박수 부탁드립니다.
+
+할아버님께서는 자리에 착석해 주시기 바랍니다.</div>
+    </section>
+
+    <section class="card" id="s11">
+      <div class="time">5:55</div>
+      <h2>11. 축복기도</h2>
+      <div class="notes">
+        <strong>비고</strong>
+        <ul>
+          <li>사회자가 기도하지 않음</li>
+          <li>축사와 같은 초청 형식</li>
+          <li>김신은 목사님께서 짧게 축복기도하신 뒤 바로 내려가심</li>
+          <li>기도 중에는 사회자 침묵. 기도 후 박수</li>
+        </ul>
+      </div>
+      <div class="script">이어서 두 사람의 새로운 가정을 위하여 축복기도가 있겠습니다.
+
+오늘 이 자리는 신랑측 교회의 담임목사님이신 김신은 목사님께서 맡아 주시겠습니다.
+목사님, 단상으로 나와 주시기 바랍니다.
+
+<span class="stage">(짧은 축복기도)</span>
+
+아멘.
+귀한 기도 감사드립니다.
+큰 박수 부탁드립니다.
+
+목사님께서는 자리에 착석해 주시기 바랍니다.</div>
+    </section>
+
+    <section class="card" id="s12">
+      <div class="time">5:59</div>
+      <h2>12. 축가</h2>
+      <div class="notes">
+        <strong>비고</strong>
+        <ul>
+          <li>신랑이 직접 부름</li>
+          <li>마이크·음향·곡 확인 후</li>
+          <li>신랑이 단에서 부를지, 앞으로 나와 부를지 동선 확인</li>
+          <li>곡명: 비밀 (멘트에는 넣지 않음)</li>
+          <li>친구 멘트는 짧게, 신부를 향하게</li>
+        </ul>
+      </div>
+      <div class="script">이어서 두 사람을 축복하는 축가가 있겠습니다.
+
+오늘 축가는 가수를 불러온 게 아니라,
+방금 신랑이 된 김준범 군이 신부에게 직접 불러 드리겠습니다.
+스무 해를 본 친구로서 한 가지만 말씀드리면, 연습은 충분히 했습니다.
+큰 박수로 맞아 주시기 바랍니다.
+
+<span class="stage">(축가)</span>
+
+아름다운 축가 감사드립니다.
+큰 박수 부탁드립니다.</div>
+    </section>
+
+    <section class="card" id="s13">
+      <div class="time">6:04</div>
+      <h2>13. 부모님 인사</h2>
+      <div class="notes">
+        <strong>비고</strong>
+        <ul>
+          <li>큰절·포옹 없음. 여섯 명이 한곳에 모이지 않음</li>
+          <li>먼저 신부 측 → 손을 가운데로 모아 위로 올리며 “화이팅!”</li>
+          <li>이어서 신랑 측 → 같은 동작으로 한 번 더</li>
+          <li>사회자가 각 회마다 하나, 둘, 셋 큐. 하객도 함께 외치도록 유도</li>
+        </ul>
+      </div>
+      <div class="script">이번에는 두 사람이 키워 주신 부모님께
+감사의 인사를 드리는 시간을 갖도록 하겠습니다.
+
+그런데 말이죠.
+오늘 이 기쁜 날에 눈물 흘리는 분이 단 한 명도 없었으면 좋겠다는 게
+신랑, 신부의 간절한 소망이었습니다.
+
+그래서 오늘은 특별히,
+눈물 쏙 빼는 큰절이나 포옹 대신
+아주 파이팅 넘치는 인사를 나누기로 했습니다.
+손을 가운데로 모았다가 위로 올리며, “화이팅!”을 외치시면 됩니다.
+
+먼저 신부 측 부모님께 인사 드리겠습니다.
+신랑, 신부는 신부 측 부모님 앞으로 서 주시길 바랍니다.
+
+<span class="stage">(이동 후)</span>
+
+네 분의 손을 가운데로 모아 주십시오.
+제가 “하나, 둘, 셋”을 외치면 손을 위로 올리며 “화이팅!” 부탁드립니다.
+하객 여러분도 함성 준비해 주세요.
+
+<span class="cue">하나, 둘, 셋!</span>
+
+<span class="stage">(손을 가운데에서 위로 · “화이팅!”)</span>
+
+이어서 신랑 측 부모님께 인사 드리겠습니다.
+신랑, 신부는 신랑 측 부모님 앞으로 서 주시길 바랍니다.
+
+<span class="stage">(이동 후)</span>
+
+다시 손을 가운데로 모아 주시고요.
+
+<span class="cue">하나, 둘, 셋!</span>
+
+<span class="stage">(손을 가운데에서 위로 · “화이팅!”)</span>
+
+하객 여러분,
+눈물 대신 더 멋진 미래를 약속한 두 가족에게 큰 박수와 함성 부탁드립니다!</div>
+    </section>
+
+    <section class="card" id="s14">
+      <div class="time">6:06</div>
+      <h2>14. 내빈 인사</h2>
+      <div class="notes">
+        <strong>비고</strong>
+        <ul>
+          <li>사회자 큐</li>
+          <li>신랑·신부가 하객석을 향해 인사할 수 있도록 위치 안내</li>
+        </ul>
+      </div>
+      <div class="script">이제 두 사람을 축복하기 위해 귀한 걸음 해 주신
+하객 여러분께 인사를 드리는 시간입니다.
+
+하객 여러분들 바라봐 주시기 바라고요.
+평생 서로를 바라보면서 사랑하며 살 수 있도록,
+그런 마음으로 감사의 인사를 올리겠습니다.
+
+<span class="cue">신랑, 신부 하객 여러분들께 인사!</span></div>
+    </section>
+
+    <section class="card" id="s15">
+      <div class="time">6:10</div>
+      <h2>15. 행진</h2>
+      <div class="notes">
+        <strong>비고</strong>
+        <ul>
+          <li>신랑·신부 행진 동선·음향 확인 후</li>
+          <li>힘찬 큐</li>
+        </ul>
+      </div>
+      <div class="script">이제 새로운 인생을 살아가실 두 분입니다.
+두 사람이 앞으로 함께 걸어갈 텐데,
+끝까지 아낌없는 박수와 따뜻한 격려 부탁드리도록 하겠습니다.
+
+<span class="cue">신랑, 신부 행진!</span> <span class="stage">(큰소리로 힘차게)</span></div>
+    </section>
+
+    <section class="card" id="s16">
+      <div class="time">행진 직후</div>
+      <h2>16. 폐식멘트</h2>
+      <div class="notes">
+        <strong>비고</strong>
+        <ul>
+          <li>연회장 안내는 하객이 빠져나갈 때까지 1~2회 반복</li>
+          <li>연회장: 같은 층 바로 옆</li>
+        </ul>
+      </div>
+      <div class="script">이상으로 김준범 군과 김란 양의 모든 결혼식을 마칩니다.
+
+이어서 신랑 신부, 양가 친지 및 지인 사진촬영이 있겠습니다.
+
+참석해 주신 모든 하객 여러분께 진심으로 감사드립니다.
+이후 이어지는 피로연에서 즐거운 시간 보내시기 바랍니다.
+하객 여러분들께서는 같은 층 바로 옆에 연회장이 마련되어 있으니 이동해 주시기 바랍니다.
+
+<span class="stage">(반복)</span>
+
+하객 여러분들께서는 같은 층 바로 옆에 연회장이 마련되어 있으니 이동해 주시기 바랍니다.
+
+대단히 감사합니다.</div>
+    </section>
+
+    <footer>
+      초안 · 김준범 ♥ 김란 · 상록아트홀<br />
+      피드백은 카톡으로 편하게 보내 주세요.
+    </footer>
+  </div>
+
+  <script>
+    async function copyLink() {
+      const url = window.location.href;
+      try {
+        await navigator.clipboard.writeText(url);
+        alert("링크를 복사했습니다. 형진이에게 바로 보내면 됩니다.");
+      } catch (e) {
+        prompt("이 주소를 복사해 주세요", url);
+      }
+    }
+  </script>
+</body>
+</html>
